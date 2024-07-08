@@ -29,6 +29,9 @@ app.use(cors());
 app.use(express.json());
 
 
+app.get('/',(req,res)=>{
+  res.send("Server Started")
+});
 
 
 
@@ -40,7 +43,7 @@ app.use(express.json());
 
 
 
-
+    const port = process.env.PORT || 3000;
       app.listen(8000,()=>{
         console.log('server started at port 8000');
       });
